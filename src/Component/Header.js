@@ -34,6 +34,7 @@ const Header = () => {
         }
     }
     const handleSidebar = () =>{
+        setActive("")
         setSidebar(prev => !prev)
     }
     return (
