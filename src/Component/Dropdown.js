@@ -3,7 +3,6 @@ import arrowDown from '../assets/images/icon-arrow-down.svg'
 import arrowUp from '../assets/images/icon-arrow-up.svg'
 const Dropdown = (props) => {
 
-    const [open, setOpen] = React.useState(false)
     const list = props.listArr?.map((li)=>{
         console.log(li)
         return (
@@ -15,9 +14,7 @@ const Dropdown = (props) => {
             </li>
         )
     })
-    const handleClick = ()=>{
-        setOpen(prev => !prev)
-    }
+
   return (
     <div className={`custom-dropdown ${props.activeNav === props.id ? "dropdown-active" : ""}`}>
         <div className={`dropdown-title ${props.activeNav === props.id ? 'active-title' : ""}`} onClick={()=>props.setActiveNav(props.id)}>
