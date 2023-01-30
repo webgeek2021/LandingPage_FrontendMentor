@@ -123,15 +123,3 @@ header {
         transform: translateX(0rem);
     }
 }
-@keyframes sidebar-in {
-    from{
-        // transform: translateX(0rem)
-        background-color: white;
-    }
-    to{
-        // display: none;
-        // transform: translateX(14rem);
-        background-color: red;
-        
-    }
-}
