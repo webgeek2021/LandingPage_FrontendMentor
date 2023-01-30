@@ -7,8 +7,8 @@ const Dropdown = (props) => {
         console.log(li)
         return (
             <li className='dropdown-li'>
-                <a href="#">
-                {li.icon ? <img src={li.icon}/> : ""}
+                <a href="#action">
+                {li.icon ? <img src={li.icon} alt="list-icon"/> : ""}
                 <span>{li.option}</span>
                 </a>
             </li>
