@@ -24,6 +24,7 @@ button {
   border: none;
   outline: none;
   font-weight: 700;
+  font-size: 1.125rem;
   color: hsl(0deg, 0%, 41%);
   cursor: pointer;
 }
@@ -35,6 +36,15 @@ button {
   font-weight: 700;
   border-radius: 1rem;
   background-color: transparent;
+}
+
+.common-btn {
+  padding: 1.25rem 2.06rem;
+  border: none;
+  background-color: hsl(0deg, 0%, 8%);
+  color: hsl(0deg, 0%, 98%);
+  font-weight: 700;
+  border-radius: 1rem;
 }
 
 button:hover {
@@ -50,27 +60,123 @@ a {
 header {
   padding: 1.93rem 2.56rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-header .left-container {
-  display: flex;
-  align-items: center;
-}
-header .left-container .logo {
+header .logo {
   margin-right: 3.93rem;
 }
-header .left-container nav {
+header .sidebar-inactive {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+header .sidebar-inactive .drop-down {
   display: flex;
 }
-header .left-container nav .custom-dropdown:not(:last-child) {
+header .sidebar-inactive .drop-down .custom-dropdown:not(:last-child) {
   margin-right: 2.125rem;
 }
-header .right-container .common-border-btn {
+header .sidebar-inactive .close-men-icon {
+  display: none;
+}
+header .sidebar-inactive .auth-btn .common-border-btn {
   margin-left: 2.5rem;
 }
+header .menu-icons {
+  display: none;
+}
 
+@media screen and (max-width: 375px) {
+  header {
+    justify-content: space-between;
+    padding: 1.37rem 1.06rem;
+    position: relative;
+  }
+  header .sidebar-inactive {
+    display: none;
+    -webkit-animation: sidebar-in ease-in-out 0.5s 1;
+            animation: sidebar-in ease-in-out 0.5s 1;
+  }
+  header .sidebar-active {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fff;
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 5rem 1.5rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    -webkit-animation: sidebar-out ease-in-out 0.5s 1;
+            animation: sidebar-out ease-in-out 0.5s 1;
+    box-shadow: 0 0rem 500px rgba(0, 0, 0, 0.5);
+    position: fixed;
+  }
+  header .sidebar-active .drop-down {
+    flex-direction: column;
+  }
+  header .sidebar-active .drop-down .custom-dropdown:not(:last-child) {
+    margin-bottom: 1.62rem;
+  }
+  header .sidebar-active .drop-down .custom-dropdown .active {
+    display: block;
+    position: initial;
+    box-shadow: none;
+    margin-top: 0.57rem;
+  }
+  header .sidebar-active .drop-down .custom-dropdown ul li:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+  header .sidebar-active .drop-down .dropdown-active:not(:last-child) {
+    margin-bottom: 0rem;
+  }
+  header .sidebar-active .auth-btn {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  header .sidebar-active .auth-btn button {
+    display: block;
+  }
+  header .sidebar-active .auth-btn button:not(:last-child) {
+    margin-bottom: 1.06rem;
+  }
+  header .sidebar-active .auth-btn .common-border-btn {
+    margin: 0px;
+    padding: 0.75rem 4.31rem;
+  }
+  header .sidebar-active .close-men-icon {
+    display: block;
+    position: absolute;
+    right: 1.06rem;
+    top: 1.37rem;
+  }
+  header .menu-icons {
+    display: block;
+  }
+}
+@-webkit-keyframes sidebar-out {
+  from {
+    transform: translateX(14rem);
+  }
+  to {
+    transform: translateX(0rem);
+  }
+}
+@keyframes sidebar-out {
+  from {
+    transform: translateX(14rem);
+  }
+  to {
+    transform: translateX(0rem);
+  }
+}
 .custom-dropdown {
   position: relative;
 }
@@ -114,4 +220,79 @@ header .right-container .common-border-btn {
 }
 .custom-dropdown .active {
   display: block;
+}
+
+.main-container {
+  display: flex;
+  padding: 4rem 8.125rem;
+}
+.main-container .left-section {
+  padding-left: 2.43rem;
+  width: 63%;
+}
+.main-container .left-section h1 {
+  font-size: 5.25rem;
+  line-height: 4.5rem;
+  margin-bottom: 4.25rem;
+}
+.main-container .left-section p {
+  margin-bottom: 3.37rem;
+  line-height: 1.86rem;
+  width: 69%;
+  color: hsl(0deg, 0%, 41%);
+}
+.main-container .left-section .common-btn {
+  margin-bottom: 6.625rem;
+}
+.main-container .left-section .company-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-container .right-section {
+  width: 55%;
+  background-image: url("../../assets/images/image-hero-desktop.png");
+  background-size: contain;
+  background-position: center;
+  margin-left: 7.43rem;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 375px) {
+  .main-container {
+    flex-direction: column-reverse;
+    padding: 0rem;
+    margin-bottom: 5.93rem;
+  }
+  .main-container .left-section {
+    width: 100%;
+    padding: 3.18rem 1.06rem 1.37rem 1.06rem;
+    text-align: center;
+  }
+  .main-container .left-section h1 {
+    font-size: 2.4rem;
+    line-height: 1.75rem;
+  }
+  .main-container .left-section h1 br {
+    display: none;
+  }
+  .main-container .left-section p {
+    width: 100%;
+  }
+  .main-container .left-section h1,
+.main-container .left-section p {
+    margin-bottom: 1.75rem;
+  }
+  .main-container .left-section .common-btn {
+    margin-bottom: 2.93rem;
+  }
+  .main-container .left-section .company-logos img {
+    height: 18px;
+  }
+  .main-container .right-section {
+    margin: 0px;
+    width: 100%;
+    height: 284px;
+    background-image: url("../../assets/images/image-hero-mobile.png");
+  }
 }/*# sourceMappingURL=style.css.map */
