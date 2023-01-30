@@ -1,0 +1,95 @@
+.main-container {
+    // display: grid;
+    // grid-template-columns: repeat(2,2fr);
+    display: flex;
+    // justify-content: space-between;
+    // width: 100%;
+    padding: 4rem 8.125rem;
+
+    .left-section {
+        padding-left: 2.43rem;
+        width: 63%;
+
+        h1 {
+            font-size: 5.25rem;
+            line-height: 4.5rem;
+            margin-bottom: 4.25rem;
+            // width: 92%;
+            // word-wrap: break-word;
+            // word-break: break-word;
+        }
+
+        p {
+            margin-bottom: 3.37rem;
+            line-height: 1.86rem;
+            width: 69%;
+            color: $light-gray;
+        }
+
+        .common-btn {
+            margin-bottom: 6.625rem;
+        }
+
+        .company-logos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .right-section {
+        width: 55%;
+        background-image: url("../../assets/images/image-hero-desktop.png");
+        background-size: contain;
+        background-position: center;
+        margin-left: 7.43rem;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width:$MOBILE_DEVICE) {
+    .main-container {
+        flex-direction: column-reverse;
+        padding: 0rem;
+        // align-items: center;
+        margin-bottom: 5.93rem;
+
+        .left-section {
+            width: 100%;
+            padding: 3.18rem  1.06rem 1.37rem 1.06rem;
+            text-align: center;
+            h1 {
+                font-size: 2.4rem;
+                line-height: 1.75rem;
+
+                br {
+                    display: none;
+                }
+            }
+
+            p {
+                width: 100%;
+            }
+
+            h1,
+            p {
+                margin-bottom: 1.75rem;
+            }
+            .common-btn{
+                margin-bottom: 2.93rem;
+            }
+            .company-logos{
+                img{
+                    height: 18px;
+                }
+            }
+        }
+
+        .right-section {
+            margin: 0px;
+            width: 100%;
+            height: 284px;
+            background-image: url("../../assets/images/image-hero-mobile.png");
+        }
+    }
+}

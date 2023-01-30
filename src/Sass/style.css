@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0deg, 0%, 98%);
+  min-height: 100vh;
+  font-size: 1.125rem;
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  outline: none;
+  font-weight: 700;
+  color: hsl(0deg, 0%, 41%);
+  cursor: pointer;
+}
+
+.common-border-btn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid hsl(0deg, 0%, 41%);
+  color: hsl(0deg, 0%, 41%);
+  font-weight: 700;
+  border-radius: 1rem;
+  background-color: transparent;
+}
+
+button:hover {
+  border-color: black;
+  color: hsl(0deg, 0%, 8%);
+}
+
+a {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 41%);
+}
+
+header {
+  padding: 1.93rem 2.56rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+header .left-container {
+  display: flex;
+  align-items: center;
+}
+header .left-container .logo {
+  margin-right: 3.93rem;
+}
+header .left-container nav {
+  display: flex;
+}
+header .left-container nav .custom-dropdown:not(:last-child) {
+  margin-right: 2.125rem;
+}
+header .right-container .common-border-btn {
+  margin-left: 2.5rem;
+}
+
+.custom-dropdown {
+  position: relative;
+}
+.custom-dropdown .dropdown-title {
+  display: flex;
+  align-items: center;
+  color: hsl(0deg, 0%, 41%);
+  cursor: pointer;
+}
+.custom-dropdown .dropdown-title img {
+  margin: auto 0.56rem;
+}
+.custom-dropdown .active-title {
+  color: hsl(0deg, 0%, 8%);
+}
+.custom-dropdown ul {
+  background-color: #fff;
+  padding: 1.43rem;
+  border-radius: 0.87rem;
+  position: absolute;
+  right: 0px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  top: 2.56rem;
+  box-shadow: 0rem 0rem 5rem -2.5rem hsl(0deg, 0%, 41%);
+}
+.custom-dropdown ul li {
+  line-height: 1rem;
+  color: hsl(0deg, 0%, 41%);
+  cursor: pointer;
+}
+.custom-dropdown ul li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.custom-dropdown ul li img {
+  margin-right: 0.813rem;
+}
+.custom-dropdown .not-active {
+  display: none;
+}
+.custom-dropdown .active {
+  display: block;
+}/*# sourceMappingURL=style.css.map */
