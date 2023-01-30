@@ -12,10 +12,10 @@ const Main = () => {
             <button className='common-btn'>Learn more</button>
 
             <div className='company-logos'>
-                <img src={Databiz} alt={"company databiz"}/>
-                <img src={Audiophile} alt={"company audiophile"}/>
-                <img src={Meet} alt={"company meet"}/>
-                <img src={Maker} alt={"company maker"}/>
+                <img src={Databiz} alt="company databiz"/>
+                <img src={Audiophile} alt="company audiophile"/>
+                <img src={Meet} alt="company meet"/>
+                <img src={Maker} alt="company maker"/>
             </div>
 
         </div>
